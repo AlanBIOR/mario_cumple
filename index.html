@@ -73,7 +73,6 @@
             border-left: 2px solid rgba(220, 38, 38, 0.35);
         }
 
-        /* Pixel art rendering for retro canvas */
         .pixelated {
             image-rendering: -moz-crisp-edges;
             image-rendering: -webkit-crisp-edges;
@@ -185,7 +184,6 @@
                         </div>
                     </div>
 
-                    <!-- Open Button -->
                     <button onclick="openSketchbook()" class="mt-2 min-h-[46px] px-5 py-2 rounded-full border border-pencilRed-600/80 bg-gradient-to-r from-graphite-900 via-pencilRed-950 to-graphite-900 text-white font-cinzel text-xs font-bold tracking-wider active:scale-95 transition-all shadow-lg flex items-center gap-2 group">
                         <span class="w-2 h-2 rounded-full bg-pencilRed-500 group-hover:animate-ping"></span>
                         <span>ABRIR LIBRETA // ROMPER SELLO</span>
@@ -308,7 +306,6 @@
                     </div>
 
                     <div class="grid grid-cols-2 gap-2.5 text-left">
-                        <!-- Minecraft -->
                         <button onclick="previewSketch('minecraft')" class="p-2.5 rounded-lg border border-graphite-700 bg-graphite-950 active:border-pencilRed-500 active:scale-95 transition flex flex-col items-center text-center group">
                             <div class="w-12 h-12 rounded border border-graphite-800 bg-graphite-900 flex items-center justify-center mb-1.5 group-hover:border-graphite-600">
                                 <span class="text-xl">⛏️🧱</span>
@@ -317,16 +314,14 @@
                             <span class="text-[9px] text-graphite-500 font-mono">Traductor mental</span>
                         </button>
 
-                        <!-- Pinturillo -->
                         <button onclick="previewSketch('pinturillo')" class="p-2.5 rounded-lg border border-graphite-700 bg-graphite-950 active:border-pencilRed-500 active:scale-95 transition flex flex-col items-center text-center group">
                             <div class="w-12 h-12 rounded border border-graphite-800 bg-graphite-900 flex items-center justify-center mb-1.5 group-hover:border-graphite-600">
-                                <span class="text-xl">🎨✍️</span>
+                                <span class="text-xl">🎨✍️️</span>
                             </div>
                             <span class="font-typewriter text-[11px] text-graphite-200 font-bold block leading-tight">Pinturillo God</span>
                             <span class="text-[9px] text-graphite-500 font-mono">Puros trazos pro</span>
                         </button>
 
-                        <!-- Dylan -->
                         <button onclick="previewSketch('dylan')" class="p-2.5 rounded-lg border border-graphite-700 bg-graphite-950 active:border-pencilRed-500 active:scale-95 transition flex flex-col items-center text-center group">
                             <div class="w-12 h-12 rounded border border-graphite-800 bg-graphite-900 flex items-center justify-center mb-1.5 group-hover:border-graphite-600">
                                 <span class="text-xl">🪩🍸</span>
@@ -335,7 +330,6 @@
                             <span class="text-[9px] text-graphite-500 font-mono">Antros y desmadre</span>
                         </button>
 
-                        <!-- Smash -->
                         <button onclick="previewSketch('smash')" class="p-2.5 rounded-lg border border-graphite-700 bg-graphite-950 active:border-pencilRed-500 active:scale-95 transition flex flex-col items-center text-center group">
                             <div class="w-12 h-12 rounded border border-graphite-800 bg-graphite-900 flex items-center justify-center mb-1.5 group-hover:border-graphite-600">
                                 <span class="text-xl">⚔️🃏</span>
@@ -344,7 +338,6 @@
                             <span class="text-[9px] text-graphite-500 font-mono">Puerta del armario</span>
                         </button>
 
-                        <!-- Navi -->
                         <button onclick="previewSketch('navi')" class="p-2.5 rounded-lg border border-graphite-700 bg-graphite-950 active:border-pencilRed-500 active:scale-95 transition flex flex-col items-center text-center group">
                             <div class="w-12 h-12 rounded border border-graphite-800 bg-graphite-900 flex items-center justify-center mb-1.5 group-hover:border-graphite-600">
                                 <span class="text-xl">🎮🐾</span>
@@ -353,7 +346,6 @@
                             <span class="text-[9px] text-graphite-500 font-mono">Prueba de sabor</span>
                         </button>
 
-                        <!-- Halloween -->
                         <button onclick="previewSketch('halloween')" class="p-2.5 rounded-lg border border-graphite-700 bg-graphite-950 active:border-pencilRed-500 active:scale-95 transition flex flex-col items-center text-center group">
                             <div class="w-12 h-12 rounded border border-graphite-800 bg-graphite-900 flex items-center justify-center mb-1.5 group-hover:border-graphite-600">
                                 <span class="text-xl">🎃🫂</span>
@@ -390,7 +382,7 @@
                             </h3>
                         </div>
                         <div class="text-[10px] font-mono px-2 py-0.5 rounded border border-graphite-700 text-graphite-400 bg-graphite-900">
-                            DAÑO: <span id="opponentDamage" class="text-pencilRed-400 font-bold">0%</span>
+                            DAÑO: <span id="opponentDamage" class="text-graphite-300 font-bold">0%</span>
                         </div>
                     </div>
 
@@ -398,7 +390,7 @@
                     <div class="relative w-full aspect-[2/1] rounded bg-[#09090b] border-2 border-graphite-800 overflow-hidden shadow-inner flex items-center justify-center">
                         <canvas id="pixelCanvas" width="320" height="160" class="w-full h-full pixelated"></canvas>
                         
-                        <!-- Screen Slash FX overlay on hit -->
+                        <!-- Screen Flash FX overlay on hit -->
                         <div id="pixelSlashEffect" class="absolute inset-0 bg-red-600/30 opacity-0 pointer-events-none transition-opacity duration-75"></div>
                     </div>
 
@@ -411,7 +403,7 @@
                         
                         <button onclick="pixelAction('egg')" class="min-h-[42px] px-2 py-1.5 rounded border border-graphite-700 bg-graphite-900 text-graphite-200 text-[11px] font-mono font-bold active:bg-green-950 active:border-green-600 active:scale-95 transition flex items-center justify-center gap-1.5 shadow">
                             <span>🥚</span>
-                            <span>Huevo Yoshi</span>
+                            <span id="eggBtnLabel">Huevo Yoshi</span>
                         </button>
 
                         <button onclick="pixelAction('sans')" class="min-h-[42px] px-2 py-1.5 rounded border border-cyan-800/80 bg-graphite-950 text-cyan-300 text-[11px] font-mono font-bold active:bg-cyan-950 active:scale-95 transition flex items-center justify-center gap-1.5 shadow">
@@ -426,7 +418,7 @@
                     </div>
 
                     <p id="pixelConsoleLog" class="text-[10px] font-mono text-graphite-400 text-center py-1">
-                        Toca un botón para que el Joker de palitos ejecute un ataque.
+                        Acumula daño con Joker hasta superar el 100% para mandarlo a volar.
                     </p>
                 </div>
             </div>
@@ -446,7 +438,6 @@
             <!-- Monochrome Manga / Persona 5 Speedlines Card -->
             <div class="bg-black border-2 border-graphite-500 py-6 px-5 rounded-lg shadow-[0_0_50px_rgba(239,68,68,0.25)] relative overflow-hidden text-left">
                 
-                <!-- Red lightning slash streak in background -->
                 <div class="absolute inset-0 bg-gradient-to-r from-transparent via-pencilRed-600/25 to-transparent transform -skew-y-12 pointer-events-none"></div>
 
                 <div class="relative z-10 text-center">
@@ -461,7 +452,6 @@
                         <p class="text-[10px] font-mono text-graphite-500 mt-0.5">0% DE DAÑO RECIBIDO • JOKER</p>
                     </div>
 
-                    <!-- Mini pixel animated victory moment -->
                     <div class="my-3 py-2 px-3 rounded bg-graphite-950 border border-graphite-800 flex items-center justify-center gap-3">
                         <span class="text-2xl animate-bounce">🃏</span>
                         <div class="text-left font-mono text-[10px] text-graphite-300">
@@ -469,6 +459,10 @@
                             <p class="text-graphite-500 text-[9px]">o saca el roblox</p>
                         </div>
                     </div>
+
+                    <button type="button" onclick="closeSmashKO(event)" class="mt-2 w-full py-2 rounded border border-graphite-700 bg-graphite-900 text-graphite-300 text-xs font-mono font-bold active:bg-graphite-800 transition">
+                        Reiniciar Combate ✕
+                    </button>
                 </div>
             </div>
         </div>
@@ -667,12 +661,10 @@
             const contentSketches = document.getElementById('contentSketches');
             const contentPixel = document.getElementById('contentPixel');
 
-            // Reset tab styles
             [btnLetter, btnSketches, btnPixel].forEach(btn => {
                 btn.className = "px-2.5 py-1.5 rounded text-[11px] font-mono transition flex items-center gap-1 text-graphite-400 hover:text-white border border-transparent whitespace-nowrap";
             });
 
-            // Hide all tabs
             contentLetter.classList.add('hidden');
             contentSketches.classList.add('hidden');
             contentPixel.classList.add('hidden');
@@ -733,7 +725,6 @@
             const content = document.getElementById('smashContent');
 
             overlay.classList.remove('hidden');
-            // Force browser reflow for clean transition
             void overlay.offsetWidth;
             
             overlay.classList.remove('pointer-events-none', 'opacity-0');
@@ -762,26 +753,56 @@
                     overlay.classList.add('hidden');
                 }, 300);
             }
+
+            // Reinicio de daño, posiciones y proyectiles del combate
+            resetPixelFight();
         }
 
+        // ================= PIXEL SMASH ENGINE =================
         const pCanvas = document.getElementById('pixelCanvas');
         const pCtx = pCanvas.getContext('2d');
         
         let pState = {
             jokerX: 60,
             jokerY: 105,
-            jokerAction: 'idle', // idle, slashing, posing
-            opponent: 'yoshi', // yoshi or sans
+            jokerAction: 'idle',
+            jokerHurtTimer: 0,
+            opponent: 'yoshi',
             oppX: 240,
             oppY: 105,
             oppDamage: 0,
             oppFlying: false,
+            flyVx: 0,
+            flyVy: 0,
             slashTimer: 0,
-            eggTimer: 0,
-            animFrame: 0
+            animFrame: 0,
+            projectiles: []
         };
 
         let pixelLoopActive = false;
+
+        function resetPixelFight() {
+            pState.oppDamage = 0;
+            pState.oppX = 240;
+            pState.oppY = 105;
+            pState.oppFlying = false;
+            pState.flyVx = 0;
+            pState.flyVy = 0;
+            pState.projectiles = [];
+            pState.jokerAction = 'idle';
+            pState.jokerHurtTimer = 0;
+
+            const dmgText = document.getElementById('opponentDamage');
+            if (dmgText) {
+                dmgText.innerText = '0%';
+                dmgText.className = 'text-graphite-300 font-bold';
+            }
+
+            const consoleBox = document.getElementById('pixelConsoleLog');
+            if (consoleBox) {
+                consoleBox.innerText = '¡Combate reiniciado! Acumula daño para mandar a volar al rival.';
+            }
+        }
 
         function startPixelLoop() {
             if (pixelLoopActive) return;
@@ -793,31 +814,62 @@
             pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
             pState.animFrame++;
 
-            // Draw Background Platform (Battlefield style floating rock)
+            // Escenario Battlefield estilo retro
             pCtx.fillStyle = '#18181b';
             pCtx.fillRect(30, 125, 260, 16);
             pCtx.fillStyle = '#27272a';
             pCtx.fillRect(30, 123, 260, 2);
-            // Red battlefield center marker
             pCtx.fillStyle = '#dc2626';
             pCtx.fillRect(158, 123, 4, 3);
 
-            // Floating mini clouds / moon
-            pCtx.fillStyle = '#3f3f46';
-            pCtx.fillRect(20, 25, 40, 6);
-            pCtx.fillRect(260, 35, 30, 5);
+            // Nubes de fondo
+            pCtx.fillStyle = '#27272a';
+            pCtx.fillRect(20, 25, 40, 5);
+            pCtx.fillRect(260, 35, 30, 4);
 
-            // Draw Joker (Stick/Pixel figure with trench coat and red dagger)
-            drawStickJoker(pState.jokerX, pState.jokerY, pState.jokerAction);
+            // Dibujar a Joker
+            drawStickJoker(pState.jokerX, pState.jokerY, pState.jokerAction, pState.jokerHurtTimer);
 
-            // Draw Opponent (Yoshi or Sans)
+            // Dibujar al Rival
             if (pState.opponent === 'yoshi') {
                 drawPixelYoshi(pState.oppX, pState.oppY, pState.oppFlying);
             } else {
                 drawPixelSans(pState.oppX, pState.oppY, pState.oppFlying);
             }
 
-            // Draw Red Slash Arc when slashing
+            // Actualizar y dibujar Proyectiles (Huevos de Yoshi / Huesos de Sans)
+            for (let i = pState.projectiles.length - 1; i >= 0; i--) {
+                const proj = pState.projectiles[i];
+                proj.x += proj.vx;
+                proj.y += proj.vy;
+                proj.vy += proj.gravity;
+                proj.rot += 0.25;
+
+                if (proj.type === 'egg') {
+                    drawPixelEgg(proj.x, proj.y, proj.rot);
+                } else {
+                    drawPixelBone(proj.x, proj.y);
+                }
+
+                // Detección de colisión con Joker
+                if (proj.x <= pState.jokerX + 10 && proj.x >= pState.jokerX - 10 && proj.y >= pState.jokerY - 30 && proj.y <= pState.jokerY + 5) {
+                    pState.jokerHurtTimer = 10;
+                    playRetroSound("C4", "16n");
+                    const flash = document.getElementById('pixelSlashEffect');
+                    flash.classList.remove('opacity-0');
+                    flash.classList.add('opacity-100');
+                    setTimeout(() => flash.classList.remove('opacity-100'), 80);
+                    pState.projectiles.splice(i, 1);
+                    continue;
+                }
+
+                // Eliminar proyectiles fuera del escenario o caídos
+                if (proj.y > 145 || proj.x < -20 || proj.x > 340) {
+                    pState.projectiles.splice(i, 1);
+                }
+            }
+
+            // Tajo rojo de Joker
             if (pState.jokerAction === 'slashing') {
                 pState.slashTimer--;
                 pCtx.strokeStyle = '#ef4444';
@@ -831,14 +883,29 @@
                 }
             }
 
-            // Update flying physics if hit
+            if (pState.jokerHurtTimer > 0) {
+                pState.jokerHurtTimer--;
+            }
+
+            // Físicas de lanzamiento (Blast Zone Knockout)
             if (pState.oppFlying) {
-                pState.oppX += 4;
-                pState.oppY -= 2;
-                if (pState.oppX > 330) {
-                    pState.oppX = 240;
-                    pState.oppY = 105;
+                pState.oppX += pState.flyVx;
+                pState.oppY += pState.flyVy;
+
+                // Estela de velocidad tipo cómic
+                pCtx.strokeStyle = '#ef4444';
+                pCtx.lineWidth = 2;
+                pCtx.beginPath();
+                pCtx.moveTo(pState.oppX - 12, pState.oppY + 8);
+                pCtx.lineTo(pState.oppX - 35, pState.oppY + 20);
+                pCtx.stroke();
+
+                // Al salir de los límites de la pantalla, disparar GAME!
+                if (pState.oppX > 340 || pState.oppY < -20) {
                     pState.oppFlying = false;
+                    setTimeout(() => {
+                        triggerSmashKO();
+                    }, 200);
                 }
             }
 
@@ -846,31 +913,33 @@
         }
 
         // Stick Figure Joker
-        function drawStickJoker(x, y, action) {
-            // Head
-            pCtx.fillStyle = '#ffffff';
+        function drawStickJoker(x, y, action, hurt) {
+            const color = hurt > 0 ? '#ef4444' : '#ffffff';
+            
+            // Cabeza
+            pCtx.fillStyle = color;
             pCtx.fillRect(x - 3, y - 28, 8, 8);
-            // Black messy hair
+            // Cabello negro revuelto
             pCtx.fillStyle = '#09090b';
             pCtx.fillRect(x - 4, y - 32, 10, 5);
-            // Red eyes / Joker Phantom Mask
+            // Antifaz y ojos rojos
             pCtx.fillStyle = '#ef4444';
             pCtx.fillRect(x + 1, y - 25, 3, 2);
 
-            // Black Trench Coat Body
+            // Abrigo negro
             pCtx.fillStyle = '#18181b';
             pCtx.fillRect(x - 4, y - 20, 10, 16);
-            // Red gloves
+            // Guantes rojos
             pCtx.fillStyle = '#dc2626';
             pCtx.fillRect(x + (action === 'slashing' ? 12 : 6), y - 14, 4, 4);
 
-            // Dagger
+            // Daga plateada
             if (action === 'slashing') {
                 pCtx.fillStyle = '#f4f4f5';
                 pCtx.fillRect(x + 16, y - 16, 12, 2);
             }
 
-            // Legs
+            // Piernas
             pCtx.fillStyle = '#09090b';
             pCtx.fillRect(x - 3, y - 4, 3, 12);
             pCtx.fillRect(x + 2, y - 4, 3, 12);
@@ -878,57 +947,98 @@
 
         // Pixel Yoshi
         function drawPixelYoshi(x, y, flying) {
-            const bounce = flying ? Math.sin(pState.animFrame * 0.4) * 6 : 0;
-            const yy = y + bounce;
+            const rot = flying ? (pState.animFrame * 0.25) : 0;
+            pCtx.save();
+            pCtx.translate(x, y);
+            pCtx.rotate(rot);
 
-            // Green Body
+            const bounce = flying ? 0 : Math.sin(pState.animFrame * 0.15) * 2;
+            const yy = bounce;
+
+            // Cuerpo verde
             pCtx.fillStyle = '#22c55e';
-            pCtx.fillRect(x - 6, yy - 24, 14, 18);
-            // Big Yoshi Nose
-            pCtx.fillRect(x - 12, yy - 26, 8, 8);
-            // White cheek & belly
+            pCtx.fillRect(-6, yy - 24, 14, 18);
+            // Nariz Yoshi
+            pCtx.fillRect(-12, yy - 26, 8, 8);
+            // Mejilla y panza blanca
             pCtx.fillStyle = '#f4f4f5';
-            pCtx.fillRect(x - 10, yy - 18, 6, 8);
-            pCtx.fillRect(x - 2, yy - 14, 6, 8);
-            // Eye
+            pCtx.fillRect(-10, yy - 18, 6, 8);
+            pCtx.fillRect(-2, yy - 14, 6, 8);
+            // Ojo
             pCtx.fillStyle = '#09090b';
-            pCtx.fillRect(x - 2, yy - 25, 3, 3);
-            // Red Saddle / shell on back
+            pCtx.fillRect(-2, yy - 25, 3, 3);
+            // Montura roja
             pCtx.fillStyle = '#ef4444';
-            pCtx.fillRect(x + 6, yy - 16, 5, 6);
-            // Orange boots
+            pCtx.fillRect(6, yy - 16, 5, 6);
+            // Botas anaranjadas
             pCtx.fillStyle = '#f97316';
-            pCtx.fillRect(x - 6, yy - 4, 6, 6);
-            pCtx.fillRect(x + 3, yy - 4, 6, 6);
+            pCtx.fillRect(-6, yy - 4, 6, 6);
+            pCtx.fillRect(3, yy - 4, 6, 6);
+
+            pCtx.restore();
         }
 
-        // Pixel Sans (Undertale easter egg)
+        // Pixel Sans
         function drawPixelSans(x, y, flying) {
-            const yy = y + (flying ? -10 : 0);
-            // Skull
-            pCtx.fillStyle = '#ffffff';
-            pCtx.fillRect(x - 6, yy - 26, 12, 10);
-            // Blue glowing eye
-            pCtx.fillStyle = (pState.animFrame % 10 > 5) ? '#06b6d4' : '#09090b';
-            pCtx.fillRect(x - 3, yy - 23, 3, 3);
-            pCtx.fillStyle = '#09090b';
-            pCtx.fillRect(x + 2, yy - 23, 3, 3);
-            // Smile
-            pCtx.fillRect(x - 4, yy - 18, 8, 2);
+            const rot = flying ? (pState.animFrame * 0.25) : 0;
+            pCtx.save();
+            pCtx.translate(x, y);
+            pCtx.rotate(rot);
 
-            // Blue Hoodie
-            pCtx.fillStyle = '#2563eb';
-            pCtx.fillRect(x - 7, yy - 16, 14, 12);
-            // Black shorts
+            const yy = flying ? 0 : Math.sin(pState.animFrame * 0.15) * 2;
+
+            // Cráneo
+            pCtx.fillStyle = '#ffffff';
+            pCtx.fillRect(-6, yy - 26, 12, 10);
+            // Ojo celeste parpadeante
+            pCtx.fillStyle = (pState.animFrame % 10 > 5) ? '#06b6d4' : '#09090b';
+            pCtx.fillRect(-3, yy - 23, 3, 3);
             pCtx.fillStyle = '#09090b';
-            pCtx.fillRect(x - 5, yy - 4, 10, 6);
-            // Pink slippers
+            pCtx.fillRect(2, yy - 23, 3, 3);
+            // Sonrisa
+            pCtx.fillRect(-4, yy - 18, 8, 2);
+
+            // Sudadera azul
+            pCtx.fillStyle = '#2563eb';
+            pCtx.fillRect(-7, yy - 16, 14, 12);
+            // Shorts negros
+            pCtx.fillStyle = '#09090b';
+            pCtx.fillRect(-5, yy - 4, 10, 6);
+            // Pantuflas rosas
             pCtx.fillStyle = '#f472b6';
-            pCtx.fillRect(x - 7, yy + 2, 5, 3);
-            pCtx.fillRect(x + 2, yy + 2, 5, 3);
+            pCtx.fillRect(-7, yy + 2, 5, 3);
+            pCtx.fillRect(2, yy + 2, 5, 3);
+
+            pCtx.restore();
+        }
+
+        // Huevo de Yoshi arrojable
+        function drawPixelEgg(x, y, rot) {
+            pCtx.save();
+            pCtx.translate(x, y);
+            pCtx.rotate(rot);
+            pCtx.fillStyle = '#ffffff';
+            pCtx.fillRect(-5, -6, 10, 12);
+            pCtx.fillRect(-6, -4, 12, 8);
+            // Manchas verdes
+            pCtx.fillStyle = '#22c55e';
+            pCtx.fillRect(-2, -3, 4, 4);
+            pCtx.fillRect(-4, 1, 3, 3);
+            pCtx.fillRect(2, -4, 3, 3);
+            pCtx.restore();
+        }
+
+        // Hueso de Sans
+        function drawPixelBone(x, y) {
+            pCtx.fillStyle = '#06b6d4';
+            pCtx.fillRect(x - 6, y - 2, 12, 4);
+            pCtx.fillRect(x - 7, y - 4, 3, 8);
+            pCtx.fillRect(x + 4, y - 4, 3, 8);
         }
 
         function pixelAction(type) {
+            if (pState.oppFlying) return; // Esperar si ya va volando
+
             const consoleBox = document.getElementById('pixelConsoleLog');
             const dmgText = document.getElementById('opponentDamage');
             const flash = document.getElementById('pixelSlashEffect');
@@ -936,29 +1046,72 @@
             if (type === 'slash') {
                 pState.jokerAction = 'slashing';
                 pState.slashTimer = 12;
-                pState.oppDamage += 18;
+                pState.oppDamage += 20;
+
+                // Estilo y color dinámico según daño acumulado
                 dmgText.innerText = pState.oppDamage + '%';
-                
+                if (pState.oppDamage >= 100) {
+                    dmgText.className = 'text-pencilRed-500 font-black animate-pulse';
+                } else if (pState.oppDamage >= 50) {
+                    dmgText.className = 'text-amber-400 font-bold';
+                }
+
                 flash.classList.remove('opacity-0');
                 flash.classList.add('opacity-100');
-                setTimeout(() => flash.classList.remove('opacity-100'), 100);
+                setTimeout(() => flash.classList.remove('opacity-100'), 80);
 
                 playRetroSound("E4", "16n");
-                consoleBox.innerText = "¡Joker acertó un Dagger Slash! Daño aumentado.";
+
+                // Knockback automático al llegar o superar 100% de daño
+                if (pState.oppDamage >= 100) {
+                    pState.oppFlying = true;
+                    pState.flyVx = 9;
+                    pState.flyVy = -6;
+                    playRetroSound("C3", "8n");
+                    consoleBox.innerText = `💥 ¡K.O.! El rival superó el 100% de daño y salió disparado a la Blast Zone.`;
+                } else {
+                    consoleBox.innerText = `¡Joker conectó un Dagger Slash! Daño actual: ${pState.oppDamage}%.`;
+                }
             } 
             else if (type === 'egg') {
-                playRetroSound("G4", "16n");
-                consoleBox.innerText = pState.opponent === 'yoshi' 
-                    ? "🥚 Yoshi lanzó un huevo defensivo estilo Yoshi's Island."
-                    : "💀 Sans esquivó el ataque con una sonrisa floja.";
+                if (pState.opponent === 'yoshi') {
+                    // Yoshi arroja huevo con parábola hacia Joker
+                    pState.projectiles.push({
+                        type: 'egg',
+                        x: pState.oppX - 10,
+                        y: pState.oppY - 18,
+                        vx: -4.8,
+                        vy: -3.5,
+                        gravity: 0.22,
+                        rot: 0
+                    });
+                    playRetroSound("G4", "16n");
+                    consoleBox.innerText = "🥚 ¡Yoshi arrojó un huevo con parábola hacia Joker!";
+                } else {
+                    // Sans arroja un hueso
+                    pState.projectiles.push({
+                        type: 'bone',
+                        x: pState.oppX - 10,
+                        y: pState.oppY - 14,
+                        vx: -5.5,
+                        vy: -1.2,
+                        gravity: 0.08,
+                        rot: 0
+                    });
+                    playRetroSound("C5", "16n");
+                    consoleBox.innerText = "💀 Sans lanzó un ataque de hueso azul.";
+                }
             } 
             else if (type === 'sans') {
                 pState.opponent = (pState.opponent === 'yoshi') ? 'sans' : 'yoshi';
+                const eggLabel = document.getElementById('eggBtnLabel');
+                eggLabel.innerText = pState.opponent === 'yoshi' ? 'Huevo Yoshi' : 'Ataque Hueso';
+
                 consoleBox.innerText = (pState.opponent === 'sans')
-                    ? "💀 ¡SANS HA ENTRADO A LA PARTIDA! (Do you wanna have a bad time?)"
+                    ? "💀 ¡SANS HA ENTRADO! (Do you wanna have a bad time?)"
                     : "🦖 Yoshi regresó al escenario de combate.";
                 
-                // Play Sans Megalovania intro notes (D4, D4, D5, A4)
+                // Notas intro Megalovania (D4, D4, D5, A4)
                 playRetroSound("D4", "16n");
                 setTimeout(() => playRetroSound("D4", "16n"), 120);
                 setTimeout(() => playRetroSound("D5", "16n"), 240);
@@ -966,13 +1119,14 @@
             } 
             else if (type === 'ko') {
                 pState.oppFlying = true;
+                pState.flyVx = 12;
+                pState.flyVy = -8;
                 pState.oppDamage = 999;
                 dmgText.innerText = '999%';
+                dmgText.className = 'text-pencilRed-500 font-black animate-pulse';
                 
                 playRetroSound("C3", "8n");
-                setTimeout(() => {
-                    triggerSmashKO();
-                }, 350);
+                consoleBox.innerText = "💥 ¡CRITICAL SMASH FINISHER!";
             }
         }
     </script>
